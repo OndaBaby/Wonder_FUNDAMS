@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47EDBA50-7983-482C-AA60-6A075A500546}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WonderPrints_Project.My.MyApplication</StartupObject>
+    <RootNamespace>WonderPrints_Project</RootNamespace>
+    <AssemblyName>WonderPrints_Project</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WonderPrints_Project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WonderPrints_Project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="mysql.data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\v45\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountManagement.Designer.vb">
+      <DependentUpon>AccountManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apparel_Hoodies.Designer.vb">
+      <DependentUpon>Apparel_Hoodies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apparel_Hoodies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apparel_ToteBag.Designer.vb">
+      <DependentUpon>Apparel_ToteBag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apparel_ToteBag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP_Stationeries.Designer.vb">
+      <DependentUpon>DP_Stationeries.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DP_Stationeries.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP_WallDecor.Designer.vb">
+      <DependentUpon>DP_WallDecor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DP_WallDecor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DP_Packaging.Designer.vb">
+      <DependentUpon>DP_Packaging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DP_Packaging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceManagement.Designer.vb">
+      <DependentUpon>InvoiceManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.vb">
+      <DependentUpon>Cart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileForm.Designer.vb">
+      <DependentUpon>ProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsForm.Designer.vb">
+      <DependentUpon>ProductsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.Designer.vb">
+      <DependentUpon>LoadingScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apparel_Shirts.Designer.vb">
+      <DependentUpon>Apparel_Shirts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apparel_Shirts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderManagement.Designer.vb">
+      <DependentUpon>OrderManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryManagement.Designer.vb">
+      <DependentUpon>InventoryManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionScheduling.Designer.vb">
+      <DependentUpon>ProductionScheduling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionScheduling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.vb">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerPOV.Designer.vb">
+      <DependentUpon>SellerPOV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SellerPOV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="ProductsAndServices.Designer.vb">
+      <DependentUpon>ProductsAndServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsAndServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.vb">
+      <DependentUpon>LogInForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.vb">
+      <DependentUpon>SignUpForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Apparel_Hoodies.resx">
+      <DependentUpon>Apparel_Hoodies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apparel_ToteBag.resx">
+      <DependentUpon>Apparel_ToteBag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP_Stationeries.resx">
+      <DependentUpon>DP_Stationeries.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP_Packaging.resx">
+      <DependentUpon>DP_Packaging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceManagement.resx">
+      <DependentUpon>InvoiceManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsForm.resx">
+      <DependentUpon>ProductsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apparel_Shirts.resx">
+      <DependentUpon>Apparel_Shirts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountManagement.resx">
+      <DependentUpon>AccountManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderManagement.resx">
+      <DependentUpon>OrderManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManagement.resx">
+      <DependentUpon>InventoryManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionScheduling.resx">
+      <DependentUpon>ProductionScheduling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileForm.resx">
+      <DependentUpon>ProfileForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerPOV.resx">
+      <DependentUpon>SellerPOV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsAndServices.resx">
+      <DependentUpon>ProductsAndServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DP_WallDecor.resx">
+      <DependentUpon>DP_WallDecor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wonderprints logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wonderprints logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wonderprints logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoodie1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoodie2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoodie3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoodie5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoodie4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230724_231531.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230724_231544.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230724_231609.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230724_231622.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230724_231555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\totebag1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wonderprints logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoodie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FE3B2F9F-FBED-4680-A1CC-4B9D1B9DE8E1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8996C447-B9FD-4968-958A-48153AFBFFEB.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F4AE8C52-0137-4DEC-BE63-C4A305675B4C.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B0605E8E-000C-480B-A80D-819EE675D824.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A61064D5-167B-407B-9B07-B6B0D8115ED9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D648B386-2878-443F-B391-537D42E4367E.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\889B44BE-6F27-48AD-BEE3-2589035A673E.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6C9C15E0-9C87-4B63-97A3-CAE4FC7E6CA4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0029BFD5-7199-40FA-8975-D21B51FC02FA.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77F9CEA3-D5CA-4C73-83BB-0A93AFE3ACA9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4871F58C-32C0-47E5-96DD-2FDBC3158CDF.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B4D1DC71-F7A0-4E19-9B07-038A9DCE06A9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2EB4D9C1-798F-40A0-A920-D9C16D7904B7.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5C25B558-24A4-4367-940D-316333DE0D8A.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3525D5E1-129A-4FD7-9A4F-0E173A5AED8F.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\88910174-FC87-456A-AF10-8DFD22AEC217.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02806D13-6304-4030-888B-AEC4D0FDE236.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5717CF14-E677-4169-8E39-23EA3F7D097A.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9621E114-A55B-4D01-A85C-7B5BEFDAE4CD.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\176388B1-E173-414A-8227-369CA66508C1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B28DE987-24C1-44BA-8EAF-929E55C16FEE.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D6A68D3E-61AB-49A6-8B4B-DC1E4ADE91C1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F88CBE36-E9A1-467B-9025-C604BFA4C794.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6C9C15E0-9C87-4B63-97A3-CAE4FC7E6CA41.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\470F6A98-68F9-44D0-90E6-23E3EBF9718A.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagmamahal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagmamahal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jungwonwf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
